@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+$cl--strong-cyan: hsl(172, 67%, 45%);
+$cl--very-dark-cyan: hsl(183, 100%, 15%);
+$cl--dark-grayish-cyan: hsl(186, 14%, 43%);
+$cl--light-grayish-cyan: hsl(185, 41%, 84%);
+$cl--white: hsl(0, 0%, 100%);
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $cl--light-grayish-cyan;
+}
+
+.logo {
+  margin-bottom: 5rem;
+}
+main {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  .left-side {
+    padding-bottom: 2rem;
+    .title {
+      margin-bottom: 1rem;
+    }
+    .margin-top {
+      margin-top: 2rem;
+    }
+    .input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      img {
+        position: absolute;
+        left: 0.4rem;
+      }
+      input {
+        width: 100%;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $cl--very-dark-cyan;
+        background-color: $cl--light-grayish-cyan;
+        outline: 0;
+        border: 0;
+        padding: 0.5rem 2.4rem;
+        vertical-align: center;
+        text-align: right;
+        font-family: "Space Mono", monospace;
+
+        &::placeholder {
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+    }
+    .tips-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(110px, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 2rem;
+
+      .tip {
+        background-color: $cl--very-dark-cyan;
+        color: $cl--white;
+        border-radius: 5px;
+        padding: 0.7rem 2rem;
+        border: none;
+        outline: none;
+        font-size: 1.4rem;
+        font-weight: 700;
+        font-family: "Space Mono", monospace;
+      }
+      .active {
+        background-color: $cl--strong-cyan;
+        color: $cl--very-dark-cyan;
+      }
+      .custom {
+        background-color: $cl--light-grayish-cyan;
+        color: $cl--very-dark-cyan;
+        font-weight: 700;
+        font-size: 1.4rem;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 0.7rem 0.7rem 0.7rem 2rem;
+        text-align: right;
+        font-family: "Space Mono", monospace;
+      }
+    }
+  }
+  .right-side {
+    background-color: $cl--very-dark-cyan;
+    border-radius: 10px;
+    padding: 1rem;
+    .title {
+      color: white;
+    }
+    .right-side__tip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2rem;
+      span {
+        opacity: 0.9;
+        color: $cl--white;
+        font-size: 1rem;
+      }
+      .price {
+        font-size: 2.4rem;
+        color: $cl--strong-cyan;
+        font-weight: 700;
+      }
+    }
+    .reset {
+      outline: none;
+      border: none;
+      padding: 0.7rem 2rem;
+      background-color: $cl--strong-cyan;
+      color: $cl--very-dark-cyan;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    .reset:active {
+      background-color: $cl--very-dark-cyan;
+      color: $cl--white;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    gap: 3rem;
+    .left-side {
+      max-width: 400px;
+      padding-bottom: 0;
+      .tips-wrapper {
+        grid-template-columns: repeat(3, minmax(110px, 1fr));
+      }
+    }
+    .right-side {
+      min-width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
