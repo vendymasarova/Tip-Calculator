@@ -18,47 +18,50 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <img class="logo" src="images/logo.svg" alt="" />
-    <main>
-      <div class="left-side">
-        <p class="title">Bill</p>
-        <div class="input">
-          <img src="images/icon-dollar.svg" alt="" />
-          <input class="bill" placeholder="0.0" type="text" />
-        </div>
-        <p class="title margin-top">Select Tip %</p>
-        <div class="tips-wrapper">
-          <button class="tip">5%</button>
-          <button class="tip">10%</button>
-          <button class="tip">15%</button>
-          <button class="tip">25%</button>
-          <button class="tip">50%</button>
-          <input class="custom" placeholder="custom" />
-        </div>
-        <p class="title">Number of People</p>
-        <div class="input">
-          <img src="images/icon-person.svg" alt="" />
-          <input type="text" placeholder="1" class="n-of-people" />
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="right-side__calculator">
-          <div class="right-side__tip">
-            <p class="title">
-              Tip Amount <br /><span class="lomeno">/ person</span>
-            </p>
-            <p class="price tip-amount">$0.00</p>
-          </div>
+    <div class="container">
+      <img class="logo" src="images/logo.svg" alt="" />
 
-          <div class="right-side__tip">
-            <p class="title">
-              Total <br /><span class="lomeno">/ person</span>
-            </p>
-            <p class="price">$0.00</p>
+      <main>
+        <div class="left-side">
+          <p class="title">Bill</p>
+          <div class="input">
+            <img src="images/icon-dollar.svg" alt="" />
+            <input class="bill" placeholder="0.0" type="text" />
+          </div>
+          <p class="title margin-top">Select Tip %</p>
+          <div class="tips-wrapper">
+            <button class="tip">5%</button>
+            <button class="tip">10%</button>
+            <button class="tip">15%</button>
+            <button class="tip">25%</button>
+            <button class="tip">50%</button>
+            <input class="custom" placeholder="custom" />
+          </div>
+          <p class="title">Number of People</p>
+          <div class="input">
+            <img src="images/icon-person.svg" alt="" />
+            <input type="text" placeholder="1" class="n-of-people" />
           </div>
         </div>
-        <button class="reset">RESET</button>
-      </div>
-    </main>
+        <div class="right-side">
+          <div class="right-side__calculator">
+            <div class="right-side__tip">
+              <p class="title">
+                Tip Amount <br /><span class="lomeno">/ person</span>
+              </p>
+              <p class="price tip-amount">$0.00</p>
+            </div>
+
+            <div class="right-side__tip">
+              <p class="title">
+                Total <br /><span class="lomeno">/ person</span>
+              </p>
+              <p class="price">$0.00</p>
+            </div>
+          </div>
+          <button class="reset">RESET</button>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

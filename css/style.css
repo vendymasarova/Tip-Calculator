@@ -24,19 +24,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  height: 100vh;
   background-color: #c5e4e7;
 }
 
 .logo {
-  margin-bottom: 5rem;
+  margin: 2rem 0 2rem 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 main {
   background-color: #fff;
   padding: 2rem;
   border-radius: 20px;
+  margin-bottom: 3rem;
 }
 
 main .left-side {
